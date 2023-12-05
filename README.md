@@ -28,7 +28,7 @@ To start the command interpreter, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/AirBnB_clone.git
+   git clone https://github.com/Ivyratermgwangqa/AirBnB_clone.git
    ```
 
 2. Navigate to the project directory:
