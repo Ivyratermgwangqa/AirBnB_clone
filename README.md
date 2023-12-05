@@ -13,11 +13,6 @@ Welcome to the AirBnB clone project's initial stage! This project sets the groun
 - **Code Style:** `pycodestyle` (version 2.8.*)
 - **Documentation:** Comprehensive and clear documentation for all modules, classes, and functions.
 
-## Execution
-
-- Functional command interpreter in both interactive and non-interactive modes.
-- All unit tests passing in both modes.
-
 ## Command Interpreter
 
 The command interpreter is a crucial component that allows users to interact with the AirBnB application through a command-line interface. It provides functionality to create new objects, retrieve objects from various sources, perform operations on objects, update object attributes, and destroy objects.
@@ -28,7 +23,7 @@ To start the command interpreter, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Ivyratermgwangqa/AirBnB_clone.git
+   git clone https://github.com/Dan2759/AirBnB_clone.git
    ```
 
 2. Navigate to the project directory:
