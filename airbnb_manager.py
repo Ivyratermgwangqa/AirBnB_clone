@@ -10,6 +10,7 @@ Functions:
 - display_info(): Displays information about Airbnb objects.
 """
 
+
 class AirbnbObject:
     """Generic Airbnb object with name and location."""
     def __init__(self, name, location):
