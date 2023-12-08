@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Defines the BaseModel class."""
-import models
 from uuid import uuid4
 from datetime import datetime
+from models import storage
 
 
 class BaseModel:
@@ -16,23 +16,21 @@ class BaseModel:
             **kwargs (dict): Additional key/value pairs of attributes.
         """
         tform = "%Y-%m-%dT%H:%M:%S.%f"
-
         if kwargs:
-            # If kwargs is not empty, create attributes based on i-j pairs
             for i, j in kwargs.items():
                 if i == "created_at" or i == "updated_at":
                     setattr(self, i, datetime.strptime(j, tform))
-                elif i != "__class__":
+                else:
                     setattr(self, i, j)
-        else:/
-            # If kwargs is empty, create a new instance with id and created_at
+        else:
             self.id = str(uuid4())
             self.created_at = datetime.today()
+            storage.new(self)
 
     def save(self):
         """Update updated_at with the current datetime."""
         self.updated_at = datetime.today()
-        models.storage.save()
+        storage.save()
 
     def to_dict(self):
         """Return the dictionary of the BaseModel instance.
