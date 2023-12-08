@@ -10,7 +10,7 @@
 - [Usage](#usage)
 - [Command Line Interface](#command-line-interface)
 - [Project Structure](#project-structure)
-- [Running Tests](#Running Tests)
+- [Running Tests](#running-rests)
 - [Contributing](#contributing)
 - [Authors](#authors)
 - [License](#license)
