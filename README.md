@@ -7,9 +7,8 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
 - [Command Line Interface](#command-line-interface)
-- [Project Structure](#project-structure)
+- [Project Structure](#project-structure)-
 - [Running Tests](#running-rests)
 - [Contributing](#contributing)
 - [Authors](#authors)
@@ -69,37 +68,6 @@ We have a powerful Command Line Interface (CLI) to interact with the Airbnb Clon
   ```bash
   ./console.py update BaseModel instance_id attribute_name "attribute_value"
   ```
-
-## Project Structure
-
-Describe the structure of your project. Here is a high-level overview:
-
-```plaintext
-Airbnb-Clone/
-│
-├── models/
-│   ├── base_model.py
-│   ├── user.py
-│   └── ...
-│
-├── tests/
-│   ├── test_console.py
-│   └── ...
-│
-├── console.py
-├── airbnb_manager.py
-├── README.md
-├── AUTHOURS
-└── ...
-```
-
-(insert_more_project_structure_here)
-
-
-```
-
-Replace the placeholder texts like `insert_logo_url_here` and others with the actual URLs and details of your project. Customize the sections according to your project's specifics.
-
 ### Interactive Mode
 
 To run the command interpreter in interactive mode, follow these steps:
@@ -142,6 +110,29 @@ Documented commands (type help <topic>):
 EOF  help  quit
 (hbnb) 
 $
+```
+
+## Project Structure
+
+Describe the structure of your project. Here is a high-level overview:
+
+```plaintext
+Airbnb-Clone/
+│
+├── models/
+│   ├── base_model.py
+│   ├── user.py
+│   └── ...
+│
+├── tests/
+│   ├── test_console.py
+│   └── ...
+│
+├── console.py
+├── airbnb_manager.py
+├── README.md
+├── AUTHOURS
+└── ...
 ```
 
 ## Running Tests
