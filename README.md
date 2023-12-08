@@ -7,6 +7,7 @@
 - [**Getting Started**](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+- [**How to Use**](how-to-use)
 - [**Command Line Interface**](#command-line-interface)
 - [**Project Structure**](#project-structure)-
 - [**Running Tests**](#running-rests)
@@ -45,7 +46,19 @@ Before you begin, ensure you have met the following requirements:
    cd Airbnb-Clone
    ```
 
-3. Install dependencies
+3. Run the command interpreter:
+   
+    ```bash
+   ./console.py
+   ```
+    
+### How to Use
+Once the command interpreter is running, you can use the following commands:
+
+help: Display a list of available commands and their descriptions.
+EOF: Exit the command interpreter.
+quit: Exit the command interpreter.
+For detailed information on available commands, type help <command>.
 
 ## Command Line Interface
 
