@@ -3,16 +3,16 @@
 ![Airbnb Logo](https://github.com/Dan2759/AirBnB_clone/assets/122816970/4b70d0e8-84fb-4dc1-8e6f-1616849b9450)
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [Getting Started](#getting-started)
+- [Introduction**](#introduction)
+- [Getting Started**](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Command Line Interface](#command-line-interface)
-- [Project Structure](#project-structure)-
-- [Running Tests](#running-rests)
-- [Contributing](#contributing)
-- [Authors](#authors)
-- [License](#license)
+- [Command Line Interface**](#command-line-interface)
+- [Project Structure**](#project-structure)-
+- [Running Tests**](#running-rests)
+- [Contributing**](#contributing)
+- [Authors**](#authors)
+- [License**](#license)
 
 ## Introduction
 
