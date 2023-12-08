@@ -53,10 +53,13 @@ Before you begin, ensure you have met the following requirements:
    ```
     
 ## How to Use
+
 Once the command interpreter is running, you can use the following commands:
+
 -**help**: Display a list of available commands and their descriptions.
 -**EOF**: Exit the command interpreter.
 -**quit**: Exit the command interpreter.
+
 For detailed information on available commands, type help <command>.
 
 ## Command Line Interface
