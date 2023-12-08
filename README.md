@@ -1,6 +1,6 @@
 # Airbnb Clone Project
 
-![Airbnb Logo](![image](https://github.com/Dan2759/AirBnB_clone/assets/122816970/4b70d0e8-84fb-4dc1-8e6f-1616849b9450))
+![Airbnb Logo](https://github.com/Dan2759/AirBnB_clone/assets/122816970/4b70d0e8-84fb-4dc1-8e6f-1616849b9450)
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -70,8 +70,6 @@ We have a powerful Command Line Interface (CLI) to interact with the Airbnb Clon
   ./console.py update BaseModel instance_id attribute_name "attribute_value"
   ```
 
-(insert_more_cli_commands_here)
-
 ## Project Structure
 
 Describe the structure of your project. Here is a high-level overview:
@@ -89,9 +87,9 @@ Airbnb-Clone/
 │   └── ...
 │
 ├── console.py
-├── setup_database.py
+├── airbnb_manager.py
 ├── README.md
-├── requirements.txt
+├── AUTHOURS
 └── ...
 ```
 
