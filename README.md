@@ -164,6 +164,3 @@ The following individuals have contributed to this repository:
 - [Kwizera Daniel](https://github.com/Dan2759)
 
 ## License
-
-This project is licensed under the [MIT License](LICENSE).
-```
