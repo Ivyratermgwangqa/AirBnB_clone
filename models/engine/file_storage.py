@@ -8,6 +8,7 @@ from models.place import Place
 from models.state import State
 from models.review import Review
 from models.city import City
+import os.path
 
 class FileStorage:
     """Represent an abstracted storage engine.
