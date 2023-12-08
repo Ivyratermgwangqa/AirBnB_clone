@@ -1,4 +1,3 @@
-```markdown
 # Airbnb Clone Project
 
 ![Airbnb Logo](insert_logo_url_here)
