@@ -138,11 +138,26 @@ Airbnb-Clone/
 │   ├── engine/
 │       ├── __init__.py
 │       ├── file_storage.py
+│       └── ...
+│   ├── __init__.py
+│   ├── amenity.py
 │   ├── base_model.py
+│   ├── city.py
+│   ├── place.py
+│   ├── review.py
+│   ├── state.py
 │   ├── user.py
 │   └── ...
 │
 ├── tests/
+│   ├── test_models/
+│       ├── __init__.py
+│       ├── test_amenity.py
+│       ├── test_city.py
+│       ├── test_place.py
+│       ├── test_review.py
+│       ├── test_state.py
+│       ├── test_user.py
 │   ├── test_console.py
 │   └── ...
 │
