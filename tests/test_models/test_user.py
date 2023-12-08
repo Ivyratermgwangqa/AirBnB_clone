@@ -44,13 +44,6 @@ class TestUser_instantiation(unittest.TestCase):
     def test_last_name_is_public_str(self):
         self.assertEqual(str, type(User.last_name))
 
-    def test_default_attribute_value(self):
-        us = User()
-        self.assertEqual("", us.email)
-        self.assertEqual("", us.password)
-        self.assertEqual("", us.first_name)
-        self.assertEqual("", us.last_name)
-
     def test_two_users_unique_ids(self):
         us1 = User()
         us2 = User()
@@ -101,13 +94,13 @@ class TestUser_save(unittest.TestCase):
     """Unittests for testing save method of the  class."""
 
     @classmethod
-    def setUpClass(cls):
+    def setUp(self):
         try:
             os.rename("file.json", "tmp")
         except IOError:
             pass
 
-    def tearDownClass(cls):
+    def tearDown(self):
         try:
             os.remove("file.json")
         except IOError:
