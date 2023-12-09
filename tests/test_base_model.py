@@ -1,7 +1,12 @@
 import unittest
+import sys
+import os
+
+# Adjust the path to include the project root directory
+sys.path.append(os.path.abspath('..'))
+
 from models.base_model import BaseModel
 from datetime import datetime
-import os
 
 class TestBaseModel(unittest.TestCase):
 
