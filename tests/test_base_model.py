@@ -56,8 +56,9 @@ class TestBaseModel(unittest.TestCase):
         print("After save:", storage.all())
         self.base_model.reload()
         print("After reload:", storage.all())
-        # Add the assertion here
-self.assertIn(self.base_model.id, storage.all())
+        # Correct the indentation of the following line
+        self.assertIn(self.base_model.id, storage.all())
 
 if __name__ == '__main__':
     unittest.main()
+
