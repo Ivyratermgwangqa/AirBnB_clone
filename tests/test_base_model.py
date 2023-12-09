@@ -13,9 +13,11 @@ class TestBaseModel(unittest.TestCase):
 
     def setUp(self):
         self.base_model = BaseModel()
+        self.storage = FileStorage()
 
     def tearDown(self):
         del self.base_model
+        del self.storage
 
     def test_instance_creation(self):
         self.assertIsInstance(self.base_model, BaseModel)
@@ -51,14 +53,12 @@ class TestBaseModel(unittest.TestCase):
         self.assertIn(self.base_model.id, str_representation)
 
     def test_reload_method(self):
-        print("Before reload:", storage.all())
+        print("Before reload:", self.storage.all())
         self.base_model.save()
-        print("After save:", storage.all())
+        print("After save:", self.storage.all())
         self.base_model.reload()
-        print("After reload:", storage.all())
-        # Correct the indentation of the following line
-        self.assertIn(self.base_model.id, storage.all())
+        print("After reload:", self.storage.all())
+        self.assertIn(self.base_model.id, self.storage.all())
 
 if __name__ == '__main__':
     unittest.main()
-
