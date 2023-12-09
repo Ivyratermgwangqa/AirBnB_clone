@@ -6,6 +6,7 @@ import os
 sys.path.append(os.path.abspath('..'))
 
 from models.base_model import BaseModel
+from models.engine.file_storage import FileStorage
 from datetime import datetime
 
 class TestBaseModel(unittest.TestCase):
@@ -51,22 +52,19 @@ class TestBaseModel(unittest.TestCase):
 
     def test_reload_method(self):
         self.base_model.save()
-        storage_path = 'file.json'
-        self.assertTrue(os.path.isfile(storage_path))
 
         # Creating a new BaseModel to clear the objects
         new_base_model = BaseModel()
         new_base_model.save()
 
-        # Reload the data from file
-        new_base_model.reload()
+        # Create an instance of FileStorage
+        storage = FileStorage()
+
+        # Reload the data from file using FileStorage's reload method
+        storage.reload()
 
         # Check if the old model is in the dictionary
-        self.assertIn(self.base_model.id, new_base_model.all())
-        
-        storage = FileStorage()
-        storage.reload()
-        new_base_model.reload()
+        self.assertIn(self.base_model.id, storage.all())
 
 if __name__ == '__main__':
     unittest.main()
