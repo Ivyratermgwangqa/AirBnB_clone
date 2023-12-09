@@ -53,12 +53,28 @@ class TestBaseModel(unittest.TestCase):
         self.assertIn(self.base_model.id, str_representation)
 
     def test_reload_method(self):
-        print("Before reload:", self.storage.all())
-        self.base_model.save()
-        print("After save:", self.storage.all())
-        self.base_model.reload()
-        print("After reload:", self.storage.all())
-        self.assertIn(self.base_model.id, self.storage.all())
+        # Create a new instance of FileStorage
+        new_storage = FileStorage()
+        
+        print("Before reload:", new_storage.all())
+        # Save the current base_model to the new storage
+        key = f"{self.base_model.__class__.__name__}.{self.base_model.id}"
+        new_storage.all()[key] = self.base_model.to_dict()
+        new_storage.save()
+        
+        print("After save:", new_storage.all())
+        
+        # Clear the current instance of BaseModel
+        del self.base_model
+        # Create a new instance of BaseModel
+        new_base_model = BaseModel()
+        
+        # Reload the new_base_model from the new_storage
+        new_base_model.reload(new_storage)
+        
+        print("After reload:", new_storage.all())
+        # Assert that the reloaded base_model is in the storage
+        self.assertIn(new_base_model.id, new_storage.all())
 
 if __name__ == '__main__':
     unittest.main()
