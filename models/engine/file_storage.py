@@ -25,9 +25,11 @@ class FileStorage:
         return FileStorage.__objects
 
     def new(self, obj):
-        """Set in __objects obj with key <obj_class_name>.id"""
-        ocn = obj.__class__.__name__
-        FileStorage.__objects["{}.{}".format(ocn, obj.id)] = obj
+        # Import here to avoid circular dependency
+        from models import storage
+        key = "{}.{}".format(obj.__class__.__name__, obj.id)
+        self.__objects[key] = obj
+        storage.save()
 
     def save(self):
         """Serialize __objects to the JSON file __file_path."""
