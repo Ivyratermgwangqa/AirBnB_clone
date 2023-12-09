@@ -51,14 +51,13 @@ class TestBaseModel(unittest.TestCase):
         self.assertIn(self.base_model.id, str_representation)
 
     def test_reload_method(self):
-    print("Before reload:", storage.all())
-    self.base_model.save()
-    print("After save:", storage.all())
-    self.base_model.reload()
-    print("After reload:", storage.all())
-
-    # Add the assertion here
-    self.assertIn(self.base_model.id, storage.all())
+        print("Before reload:", storage.all())
+        self.base_model.save()
+        print("After save:", storage.all())
+        self.base_model.reload()
+        print("After reload:", storage.all())
+        # Add the assertion here
+self.assertIn(self.base_model.id, storage.all())
 
 if __name__ == '__main__':
     unittest.main()
