@@ -63,6 +63,10 @@ class TestBaseModel(unittest.TestCase):
 
         # Check if the old model is in the dictionary
         self.assertIn(self.base_model.id, new_base_model.all())
+        
+        storage = FileStorage()
+        storage.reload()
+        new_base_model.reload()
 
 if __name__ == '__main__':
     unittest.main()
