@@ -1,5 +1,5 @@
 import unittest
-from AirBnB_clone.models.base_model import BaseModel
+from models.base_model import BaseModel
 from datetime import datetime
 import os
 
