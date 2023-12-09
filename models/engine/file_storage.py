@@ -42,7 +42,7 @@ class FileStorage:
         """Deserialize the JSON file __file_path to __objects, if it exists."""
         try:
             with open(FileStorage.__file_path) as fl:
-                objdict = json.load(f)
+                objdict = json.load(fl)
                 for o in objdict.values():
                     classe_name = o["__class__"]
                     del o["__class__"]
