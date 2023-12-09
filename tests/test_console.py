@@ -5,6 +5,11 @@ from unittest.mock import patch
 from io import StringIO
 import os
 import json
+import sys
+
+# Add the project root directory to the sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from models.base_model import BaseModel
 from models.user import User
 from models.amenity import Amenity
@@ -14,13 +19,8 @@ from models.state import State
 from models.city import City
 from models.engine.file_storage import FileStorage
 from console import HBNBCommand
-
-# Add the project root to sys.path
-import sys
-sys.path.append("/path/to/your/project_root")
-
-# Import the necessary modules from your project
 from models import storage
+
 
 class TestHbnbConsole(unittest.TestCase):
     """this will all the
