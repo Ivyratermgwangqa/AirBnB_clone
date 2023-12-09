@@ -2,7 +2,6 @@
 """Defines the BaseModel class."""
 from uuid import uuid4
 from datetime import datetime
-from models import storage
 
 
 class BaseModel:
@@ -26,12 +25,17 @@ class BaseModel:
             self.id = str(uuid4())
             self.updated_at = datetime.today()
             self.created_at = datetime.today()
-            storage.new(self)
+            self.new()
 
     def save(self):
         """Update updated_at with the current datetime."""
+        from models import storage  # Import here to avoid circular dependency
         self.updated_at = datetime.today()
         storage.save()
+        
+    def new(self):
+        from models import storage  # Import here to avoid circular dependency
+        storage.new(self)
 
     def to_dict(self):
         """Return the dictionary of the BaseModel instance.
