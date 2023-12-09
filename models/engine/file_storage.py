@@ -47,6 +47,7 @@ class FileStorage:
                     class_name = value["__class__"]
                     del value["__class__"]
                     instance = eval(class_name)(**value)
+                    key = "{}.{}".format(class_name, instance.id)
                     self.__objects[key] = instance
         except FileNotFoundError:
             return
