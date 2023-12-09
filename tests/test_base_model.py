@@ -51,14 +51,14 @@ class TestBaseModel(unittest.TestCase):
         self.assertIn(self.base_model.id, str_representation)
 
     def test_reload_method(self):
-        self.base_model.save()
+    print("Before reload:", storage.all())
+    self.base_model.save()
+    print("After save:", storage.all())
+    self.base_model.reload()
+    print("After reload:", storage.all())
 
-        # Instantiate FileStorage and reload the data
-        storage = FileStorage()
-        storage.reload()
-
-        # Check if the old model is in the dictionary
-        self.assertIn(self.base_model.id, storage.all())
+    # Add the assertion here
+    self.assertIn(self.base_model.id, storage.all())
 
 if __name__ == '__main__':
     unittest.main()
