@@ -32,6 +32,10 @@ class BaseModel:
         from models import storage  # Import here to avoid circular dependency
         self.updated_at = datetime.today()
         storage.save()
+        
+    def new(self):
+        from models import storage  # Import here to avoid circular dependency
+        storage.new(self)
 
     def to_dict(self):
         """Return the dictionary of the BaseModel instance.
