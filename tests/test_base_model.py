@@ -53,14 +53,8 @@ class TestBaseModel(unittest.TestCase):
     def test_reload_method(self):
         self.base_model.save()
 
-        # Creating a new BaseModel to clear the objects
-        new_base_model = BaseModel()
-        new_base_model.save()
-
-        # Create an instance of FileStorage
+        # Instantiate FileStorage and reload the data
         storage = FileStorage()
-
-        # Reload the data from file using FileStorage's reload method
         storage.reload()
 
         # Check if the old model is in the dictionary
