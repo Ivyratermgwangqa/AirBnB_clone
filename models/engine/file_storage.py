@@ -37,18 +37,18 @@ class FileStorage:
         objdict = {obj: odict[obj].to_dict() for obj in odict.keys()}
         with open(FileStorage.__file_path, "w") as fl:
             json.dump(objdict, fl)
-
-  def reload(self):
-    """Deserialize the JSON file __file_path to __objects, if it exists."""
-    try:
-        with open(FileStorage.__file_path) as fl:
-            objdict = json.load(fl)
-            for key, value in objdict.items():
-                class_name = value["__class__"]
-                del value["__class__"]
-                instance = eval(class_name)(**value)
-                key = "{}.{}".format(class_name, instance.id)
-                self.__objects[key] = instance
-                print(f"Reloaded object: {key}")
-    except FileNotFoundError:
-        return
+            
+    def reload(self):
+        """Deserialize the JSON file __file_path to __objects, if it exists."""
+        try:
+            with open(FileStorage.__file_path) as fl:
+                objdict = json.load(fl)
+                for key, value in objdict.items():
+                    class_name = value["__class__"]
+                    del value["__class__"]
+                    instance = eval(class_name)(**value)
+                    key = "{}.{}".format(class_name, instance.id)
+                    self.__objects[key] = instance
+                    print(f"Reloaded object: {key}")
+        except FileNotFoundError:
+            return
