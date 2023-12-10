@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 """test for the console"""
-import unittest
-from unittest.mock import patch
-from io import StringIO
 import os
 import json
 import sys
+import unittest
+from io import StringIO
+from unittest.mock import patch
 
-# Add the project root directory to the sys.path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+import console
 from models.base_model import BaseModel
 from models.user import User
 from models.amenity import Amenity
@@ -20,6 +19,10 @@ from models.city import City
 from models.engine.file_storage import FileStorage
 from console import HBNBCommand
 from models import storage
+
+
+# Add the project root directory to the sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
 class TestHbnbConsole(unittest.TestCase):
