@@ -10,6 +10,7 @@ from models.review import Review
 from models.city import City
 import os.path
 
+
 class FileStorage:
     """Represent an abstracted storage engine.
 
@@ -37,7 +38,7 @@ class FileStorage:
         objdict = {obj: odict[obj].to_dict() for obj in odict.keys()}
         with open(FileStorage.__file_path, "w") as fl:
             json.dump(objdict, fl)
-            
+
     def reload(self):
         """Deserialize the JSON file __file_path to __objects, if it exists."""
         try:
