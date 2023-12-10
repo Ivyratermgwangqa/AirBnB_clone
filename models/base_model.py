@@ -32,7 +32,7 @@ class BaseModel:
         from models import storage  # Import here to avoid circular dependency
         self.updated_at = datetime.today()
         storage.save()
-        
+
     def new(self):
         from models import storage  # Import here to avoid circular dependency
         storage.new(self)
