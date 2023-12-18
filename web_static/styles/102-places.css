@@ -1,0 +1,9 @@
+@media only screen and (max-width: 600px) {
+    .flex-container {
+        width: 100%;
+    }
+    
+    .places {
+        justify-content: center;
+    }
+}
