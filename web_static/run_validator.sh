@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Specify the path to your project directory
-PROJECT_DIR="~/AirBnB_clone/web_static"
+# Specify the absolute path to your project directory
+PROJECT_DIR="/root/AirBnB_clone/web_static"
 
 # Find all HTML and CSS files in the project directory
 FILES=$(find "$PROJECT_DIR" -type f \( -name "*.html" -o -name "*.css" \))
