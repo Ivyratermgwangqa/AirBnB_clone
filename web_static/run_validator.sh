@@ -1,11 +1,16 @@
 #!/bin/bash
 
-AIRBNB_REPO_PATH="/root/AirBnB_clone/web_static"  # Update this path to the correct one
+# Specify the path to your project directory
+PROJECT_DIR="~/AirBnB_clone/web_static"
+
+# Find all HTML and CSS files in the project directory
+FILES=$(find "$PROJECT_DIR" -type f \( -name "*.html" -o -name "*.css" \))
+
+# Path to the W3C validator script
 W3C_VALIDATOR_SCRIPT="./W3C-Validator/w3c_validator.py"
 
-FILES=$(find "$AIRBNB_REPO_PATH" -type f \( -name "*.html" -o -name "*.css" \))
-
+# Loop through each file and run the W3C validator
 for FILE in $FILES; do
     echo "Running W3C Validator for file: $FILE"
-    python3 "$W3C_VALIDATOR_SCRIPT" "$FILE"
+    "$W3C_VALIDATOR_SCRIPT" "$FILE"
 done
