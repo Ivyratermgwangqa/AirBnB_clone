@@ -1,0 +1,50 @@
+.places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 390px;
+    padding: 20px;
+    border: 1px solid #FF5A5F;
+    border-radius: 4px;
+}
+
+.amenities,
+.reviews {
+    margin-top: 40px;
+}
+
+.amenities h2,
+.reviews h2 {
+    font-size: 16px;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 5px;
+}
+
+.amenities ul,
+.reviews ul {
+    list-style: none;
+    padding: 0;
+}
+
+.amenities li,
+.reviews li {
+    margin-bottom: 10px;
+}
+
+.price_by_night,
+.user,
+.description {
+    margin-top: 10px;
+}
+
+.information,
+.amenities,
+.reviews {
+    margin-top: 10px;
+}
