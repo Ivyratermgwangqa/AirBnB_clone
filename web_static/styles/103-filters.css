@@ -1,1 +1,36 @@
 /* Add styles for filters section */
+/* Filters Styles */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 70px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+
+.locations,
+.amenities {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Improve color contrast for better readability */
+.filters h2,
+.filters h3,
+.filters h4 {
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+    .locations,
+    .amenities {
+        width: 25%;
+        border-right: 1px solid #DDDDDD;
+    }
+}
