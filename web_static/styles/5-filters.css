@@ -1,7 +1,5 @@
-/* Common styles for filters */
 .filters {
     display: flex;
-    align-items: stretch;
 }
 
 .locations,
@@ -9,20 +7,18 @@
     height: 100%;
     width: 25%;
     border-right: 1px solid #DDDDDD;
-    box-sizing: border-box;
+    padding: 15px;
 }
 
-.locations {
-    border-right: none; /* No border on the first left filter */
-}
-
-/* Title styles */
-h3 {
+.locations h3,
+.amenities h3 {
     font-weight: 600;
 }
 
-/* Subtitle styles */
-h4 {
+.locations h4,
+.amenities h4 {
     font-weight: 400;
     font-size: 14px;
 }
+
+/* Add additional styles for the filters if needed */
