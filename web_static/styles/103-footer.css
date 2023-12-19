@@ -1,8 +1,23 @@
+/* Footer Styles */
 footer {
-    background-color: #00FF00;
-    color: #FFFFFF;
+    background-color: #484848;
+    color: white;
     height: 60px;
     width: 100%;
-    text-align: center;
-    line-height: 60px;
+    border-top: 1px solid #CCCCCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Improve color contrast for better readability */
+footer p {
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    footer {
+        font-size: 12px;
+    }
 }
