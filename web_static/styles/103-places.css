@@ -1,9 +1,31 @@
-@media only screen and (max-width: 600px) {
-    .flex-container {
+/* Places Styles */
+.places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.place {
+    width: 45%;
+    margin-bottom: 20px;
+    border: 1px solid #FF5A5F;
+    border-radius: 4px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Improve color contrast for better readability */
+.places h1,
+.places h2,
+.places h3,
+.places h4,
+.places p {
+    color: #484848;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .place {
         width: 100%;
-    }
-    
-    .places {
-        justify-content: center;
     }
 }
